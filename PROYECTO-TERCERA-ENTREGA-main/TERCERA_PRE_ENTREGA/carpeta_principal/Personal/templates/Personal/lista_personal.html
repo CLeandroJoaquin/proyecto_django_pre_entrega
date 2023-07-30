@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title> Lista de Personal</title>
+{% endblock titulo %}
+
+{% block contenido %}
+<h3>Personal:</h3>
+<br><br>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Legajo</th>
+            <th>Antiguedad</th>
+            <th>Puesto</th>
+            <th></th>
+
+        </tr>
+        {% for personal in lista_personal %}    #revisar si está bien  la variable OPERADOR y lista_operarios
+        <tr>
+            <td> {{ personal.id }}</td>
+            <td> {{ personal.nombre }}</td>
+            <td> {{ personal.numero_legajo}}</td>
+            <td> {{ personal.antiguedad}}</td>
+            <td> {{ personal.puesto}}</td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
+
+
+
+
+
+
+             
